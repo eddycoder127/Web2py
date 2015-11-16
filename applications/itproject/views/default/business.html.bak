@@ -1,0 +1,43 @@
+{{extend 'layout.html'}}
+{{if len(var) == 0:}}
+{{for x in busy:}}
+<img src="/itproject/default/download/{{=x.image}}" />
+<br><br>
+<p>
+    {{=x.news}}
+    {{busy_comment = db((db.News_comment.title==x.id)).select()}}
+    {{for y in busy_comment:}}
+    <div class="well">
+        {{=y.created_by.first_name}} {{=y.created_by.last_name}}
+        wrote on {{=y.created_on}} says
+        {{=y.body}}
+    </div>
+    {{pass}}<!--y in comment-->
+    {{if auth.user:}}
+    {{=forms[x.id]}}
+    {{pass}}<!--form-->
+</p>
+{{pass}}<!--x in pol-->
+<!--len var-->
+{{else:}}
+{{for x in busy:}}
+{{if int(x.id) == int(var[0]) :}}
+<img src="/itproject/default/download/{{=x.image}}" />
+<br><br>
+<p>
+    {{=x.news}}
+    {{busy_comment = db((db.News_comment.title==x.id)).select()}}
+    {{for y in busy_comment:}}
+    <div class="well">
+        {{=y.created_by.first_name}} {{=y.created_by.last_name}}
+        wrote on {{=y.created_on}} says
+        {{=y.body}}
+    </div>
+    {{pass}}<!--y in comment-->
+    {{if auth.user:}}
+    {{=forms[x.id]}}
+    {{pass}}<!--form-->
+</p>
+{{pass}}<!--x.id in var-->
+{{pass}}<!--x in pol-->
+{{pass}}<!--else-->

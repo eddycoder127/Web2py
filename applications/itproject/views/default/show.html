@@ -1,0 +1,23 @@
+{{extend 'layout.html'}}
+<h2>
+    {{=update.title}}
+</h2>
+<i>
+    Posted on {{=update.created_on}}
+</i>
+<p>
+    Created by {{=update.created_by.first_name}} {{=update.created_by.last_name}}
+<p>
+    {{=update.body}}
+</p>
+
+{{for comment in comments:}}
+<div class="well">
+    {{=comment.created_by.first_name}} {{=comment.created_by.last_name}}
+    on {{=comment.created_on}} says
+    {{=comment.body}}
+</div>
+{{pass}}
+{{if auth.user:}}
+{{=form}}
+{{pass}}

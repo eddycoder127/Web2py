@@ -1,0 +1,68 @@
+.categories{
+    width: 70%;
+    font-size: 15px;
+    height: 20px;
+    position: relative;
+    display: block;
+    margin-left: 10%;
+    margin-top: 15%;
+    background-color: rgb(222, 222, 222);
+}
+.short_title{
+    background-color: rgb(222, 222, 222);
+}
+.main_page{
+    margin-top: -1.7%;
+    background-color: rgb(222, 222, 222);
+    height: 100%;
+    width: 70%;
+    margin-left: 10%;
+}
+.main_content{
+    background-color: rgb(222, 222, 222);
+    height: 50%;
+    width: 60%;
+}
+ul,ol,li{
+    list-style-type:none;
+    display: inline;
+}
+#sports{
+    position: relative;
+    margin-left: -50%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+#politics{
+    position: relative;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+#entertain{
+    position: relative;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+#bollywood{
+    position: relative;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+#business{
+    position: relative;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+#interntnl{
+    position: relative;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+#logo{
+    position: absolute;
+    margin-top: -150px;
+    margin-left: -1%;
+}
+tr[id="News_comment_title__row"]{
+    display: none;
+}

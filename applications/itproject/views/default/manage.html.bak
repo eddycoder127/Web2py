@@ -1,0 +1,58 @@
+{{extend 'layout.html'}}
+<h1 align="center">
+    Management Interface
+</h1>
+<br>
+<h3>
+    News
+</h3>
+{{=grid2}}
+<br>
+<h4>
+    Add News
+</h4>
+{{=form1}}
+<h3>
+    News Comment
+</h3>
+{{=grid3}}
+<br>
+<h3>
+    User Management
+</h3>
+{{=grid4}}
+<br>
+<h4>
+    Manage users
+</h4>
+{{=form3}}
+<br>
+<h3>
+    Group Management
+</h3>
+{{=grid5}}
+<br>
+<h4>
+    Manage Groups
+</h4>
+{{=form4}}
+<br>
+<h3>
+    Membership Management
+</h3>
+{{=grid6}}
+<br>
+<h4>
+    Manage Members
+</h4>
+{{=form5}}
+<br>
+<h3>
+    Permission Management
+</h3>
+{{=grid7}}
+<br>
+<h4>
+    Manage Permission
+</h4>
+{{=form6}}

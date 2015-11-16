@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+<div class="main_page">
+    <div class="main_content">
+        {{x=randint(0,len(pol)-1)}}
+        {{y=randint(0,len(busy)-1)}}
+        {{z=randint(0,len(enter)-1)}}
+        {{w=randint(0,len(inter)-1)}}
+        {{a=randint(0,len(sport)-1)}}
+        {{b=randint(0,len(boly)-1)}}
+        <a href="{{=URL('default','politics',args=(pol[x].id))}}"><img src="/itproject/default/download/{{=pol[x].image}}" /></a>
+        <div class="short_title">{{=pol[x].short_title}}</div>
+        <a href="{{=URL('default','business',args=(busy[y].id))}}"><img src="/itproject/default/download/{{=busy[y].image}}" /></a>
+        <div class="short_title">{{=busy[y].short_title}}</div>
+        <a href="{{=URL('default','entertainment',args=(enter[z].id))}}"><img src="/itproject/default/download/{{=enter[z].image}}" /></a>
+        <div class="short_title">{{=enter[z].short_title}}</div>
+        <a href="{{=URL('default','international',args=(inter[w].id))}}"><img src="/itproject/default/download/{{=inter[w].image}}" /></a>
+        <div class="short_title">{{=inter[w].short_title}}</div>
+        <a href="{{=URL('default','sports',args=(sport[a].id))}}"><img src="/itproject/default/download/{{=sport[a].image}}" /></a>
+        <div class="short_title">{{=sport[a].short_title}}</div>
+        <a href="{{=URL('default','bollywood',args=(boly[b].id))}}"><img src="/itproject/default/download/{{=boly[b].image}}" /></a>
+        <div class="short_title">{{=boly[b].short_title}}</div>
+    </div><!--main_content-->
+    <div id="side_bar">
+        {{=len(pol)}}
+    </div><!--side_bar-->
+</div><!--main_page-->
